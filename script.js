@@ -9,6 +9,15 @@
     ex3_two.addEventListener("drop",(event)=>{
       event.preventDefault();
       ex3_two.appendChild(ex3_element);
-      ex3_element.draggable = false;
+      //ex3_element.draggable = false;    
+    })
+    //C 1_2.2
+    var ex3_one = document.getElementById("ex3_one");
+    ex3_one.addEventListener("dragover", (event) =>{
+      event.preventDefault();
+    })
+    ex3_one.addEventListener("drop",(event)=>{
+      event.preventDefault();
+      ex3_one.appendChild(ex3_element);
     })
 })();
