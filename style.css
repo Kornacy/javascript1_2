@@ -21,3 +21,9 @@ body {
     background-color: red;
     width: 100px;
   }
+  #ex6_element {
+    width: 100px;
+    display: block;
+    background-color: lightgreen;
+    
+  }

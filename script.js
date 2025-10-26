@@ -20,4 +20,15 @@
       event.preventDefault();
       ex3_one.appendChild(ex3_element);
     })
+    //C 1_3
+    var ex6_element = document.getElementById("ex6_element");
+    var ex6_animate_button = document.getElementById("ex6_animate_button");
+    var windowWidth = window.innerWidth;
+    ex6_animate_button.addEventListener("click", ()=>{
+      ex6_element.style.transition = "all 2s";
+      ex6_element.style.transform = "translateX(" + (windowWidth - 128) + "px)";
+      setTimeout(() => {
+        ex6_element.style.transform = "translateX(0px)";
+      }, 2000);
+    });
 })();
