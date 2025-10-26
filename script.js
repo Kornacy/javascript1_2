@@ -36,7 +36,13 @@
     ex4_button.addEventListener("click", ()=>{
       document.body.style.backgroundColor = getRandomColor();
     });
-
+    //C 1_5
+    var ex2_text = document.getElementById("ex2_text");
+    var ex2_content = document.getElementById("ex2_content");
+    ex2_text.addEventListener("input", ()=>{
+      var length = ex2_text.value.length;
+      ex2_content.textContent = "Wpisano " + length + " znaków";
+    });
 })();
     function getRandomColor() {
       var letters = '0123456789ABCDEF';
