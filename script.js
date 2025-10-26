@@ -31,4 +31,18 @@
         ex6_element.style.transform = "translateX(0px)";
       }, 2000);
     });
+    //C 1_4
+    var ex4_button = document.getElementById("ex4_button");
+    ex4_button.addEventListener("click", ()=>{
+      document.body.style.backgroundColor = getRandomColor();
+    });
+
 })();
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
