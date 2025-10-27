@@ -43,6 +43,27 @@
       var length = ex2_text.value.length;
       ex2_content.textContent = "Wpisano " + length + " znaków";
     });
+    //C 1_6
+    var ex6_button_timer = document.getElementById("ex6_button_timer");
+    var ex6_content_timer = document.getElementById("ex6_content_timer");
+    var running = false;
+    var timer =null
+    ex6_content_timer.textContent = "0s";
+    ex6_button_timer.addEventListener("click", ()=>{
+      if(!running){
+        running = true;
+        var startTime = new Date().getTime();
+        timer = setInterval(() => {
+          var elapsedTime = new Date().getTime() - startTime;
+          var seconds = Math.floor(elapsedTime / 1000);
+          ex6_content_timer.textContent = seconds + "s";
+        }, 1000);
+      } else {
+        running = false;
+        clearInterval(timer);
+      }
+    });
+
 })();
     function getRandomColor() {
       var letters = '0123456789ABCDEF';
